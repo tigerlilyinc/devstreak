@@ -13,17 +13,17 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <a class="brand" href="/">
+          <a class="brand" href="<%= root_path %>">
             <img src="<%= image_path('sidespin-logo.png') %>" /> devStreak
           </a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li <%= 'class="active"'.html_safe if body_class.include?("index") %>><a href="/">Home</a></li>
-              <li <%= 'class="active"'.html_safe if body_class.include?("details") %>><a href="/details">Details</a></li>
-              <li <%= 'class="active"'.html_safe if body_class.include?("team") %>><a href="/team">Team</a></li>
-              <li <%= 'class="active"'.html_safe if body_class.include?("contact") %>><a href="/contact">Contact & FAQ</a></li>
+              <li <%= 'class="active"'.html_safe if body_class.include?("index") %>><a href="<%= root_path %>">Home</a></li>
+              <li <%= 'class="active"'.html_safe if body_class.include?("details") %>><a href="<%= details_path %>">Details</a></li>
+              <li <%= 'class="active"'.html_safe if body_class.include?("team") %>><a href="<%= team_path %>">Team</a></li>
+              <li <%= 'class="active"'.html_safe if body_class.include?("contact") %>><a href="<%= contact_path %>">Contact & FAQ</a></li>
             </ul>
-            <a href="apply" class="btn btn-primary pull-right">Apply Now!</a>
+            <a href="<%= apply_path %>" class="btn btn-primary pull-right">Apply Now!</a>
           </div><!--/.nav-collapse -->
         </div>
       </div>
