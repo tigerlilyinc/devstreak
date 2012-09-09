@@ -13,3 +13,9 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Don't track assets for now
+/public/assets
+
+.DS_Store
+
