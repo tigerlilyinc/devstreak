@@ -1,4 +1,4 @@
-<h3>Apply for the November/December session of devStreak</h3>
+<h3>Apply for the November/December session of codeStreak</h3>
 
 <div class="alert">
   We're not accepting applications after October 5th, so make sure to apply on time! We'll respond to all applicants letting you know your status on October 8th.
@@ -20,7 +20,7 @@
   <div class="control-group">
     <label class="control-label" for="inputVideoUrl">Video URL</label>
     <div class="controls controls-row">
-      <input name="submission[video]" type="text" id="inputVideo" class="span4" placeholder="Video URL"><span class="span4 inline">We'd like you to upload a short video (maximum two minutes) to YouTube, explaining why the devStreak program is important to you. Make sure the video privacy is set to "unlisted" so we can view it!</span>
+      <input name="submission[video]" type="text" id="inputVideo" class="span4" placeholder="Video URL"><span class="span4 inline">We'd like you to upload a short video (maximum two minutes) to YouTube, explaining why the codeStreak program is important to you. Make sure the video privacy is set to "unlisted" so we can view it!</span>
     </div>
   </div>
   <div class="control-group">
@@ -32,10 +32,10 @@
   <div class="control-group">
     <div class="controls">
       <label class="checkbox">
-        <input type="checkbox" id="inputPayment"> If I am accepted to devStreak, I will pay the <a href="<%= details_path %>#tuition">program tuition</a> ($5,000)
+        <input type="checkbox" id="inputPayment"> If I am accepted to codeStreak, I will pay the <a href="<%= details_path %>#tuition">program tuition</a> ($5,000)
       </label>
       <label class="checkbox">
-        <input type="checkbox" id="inputEffort"> If I am accepted to devStreak, I promise to give it 100% effort and time to succeed
+        <input type="checkbox" id="inputEffort"> If I am accepted to codeStreak, I promise to give it 100% effort and time to succeed
       </label>
       <br />
       <div id="inputStatus" class="alert alert-error" style="display: none">
@@ -121,7 +121,7 @@ $(function() {
           $('#inputStatus').show();
         },
         error: function() {
-          $('#inputStatus').text("Something went wrong - please email contact@devstreak.com and we'll fix the issue!");
+          $('#inputStatus').text("Something went wrong - please email contact@codestreak.com and we'll fix the issue!");
           $('#inputStatus').addClass('alert-error');
           $('#inputStatus').removeClass('alert-success');
           $('#inputStatus').show();
