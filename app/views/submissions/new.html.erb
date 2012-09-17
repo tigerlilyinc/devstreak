@@ -1,0 +1,134 @@
+<h3>Apply for the November/December session of codeStreak</h3>
+
+<div class="alert">
+  We're not accepting applications after October 5th, so make sure to apply on time! We'll respond to all applicants letting you know your status on October 8th.
+</div>
+
+<%= form_for(:submission, :url => submissions_path, :html => {:id => "submissions_form", :class => 'form-horizontal'}) do |f| %>
+  <div class="control-group">
+    <label class="control-label" for="inputName">Name</label>
+    <div class="controls">
+      <input name="submission[name]" type="text" id="inputName" class="span4" placeholder="Name">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputEmail">Email</label>
+    <div class="controls">
+      <input name="submission[email]" type="text" id="inputEmail" class="span4" placeholder="Email">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputVideoUrl">Video URL</label>
+    <div class="controls controls-row">
+      <input name="submission[video]" type="text" id="inputVideo" class="span4" placeholder="Video URL"><span class="span4 inline">We'd like you to upload a short video (maximum two minutes) to YouTube, explaining why the codeStreak program is important to you. Make sure the video privacy is set to "unlisted" so we can view it!</span>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputEssay">Essay</label>
+    <div class="controls controls-row">
+      <textarea name="submission[essay]" id="inputEssay" class="span4" rows="10" placeholder="Response here..."></textarea><span class="span4 inline">Imagine there's a tree in your backyard (if you don't have a backyard, you should probably imagine that too), and that you would like to build a treehouse. Write a short essay (maximum 100 words) on how you would accomplish that goal.</span>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <label class="checkbox">
+        <input type="checkbox" id="inputPayment"> If I am accepted to codeStreak, I will pay the <a href="<%= details_path %>#tuition">program tuition</a> ($5,000)
+      </label>
+      <label class="checkbox">
+        <input type="checkbox" id="inputEffort"> If I am accepted to codeStreak, I promise to give it 100% effort and time to succeed
+      </label>
+      <br />
+      <div id="inputStatus" class="alert alert-error" style="display: none">
+        Please fill out all fields in the application!
+      </div>
+      <button type="submit" class="btn btn-primary">Submit Application</button>
+    </div>
+  </div>
+<% end %>
+
+<script>
+$(function() {
+    $('#submissions_form').submit(function() {
+      $(this).ajaxSubmit({
+        beforeSubmit: function() {
+          hasErrors = false;
+
+          $inputName = $('#inputName');
+          if(!$inputName.val()) {
+            hasErrors = true;
+            $inputName.parents('.control-group').addClass('error');
+          } else {
+            $inputName.parents('.control-group').removeClass('error');
+          }
+
+          $inputEmail = $('#inputEmail');
+          if(!$inputEmail.val()) {
+            hasErrors = true;
+            $inputEmail.parents('.control-group').addClass('error');
+          } else {
+            $inputEmail.parents('.control-group').removeClass('error');
+          }
+
+          $inputVideo = $('#inputVideo');
+          if(!$inputVideo.val()) {
+            hasErrors = true;
+            $inputVideo.parents('.control-group').addClass('error');
+          } else {
+            $inputVideo.parents('.control-group').removeClass('error');
+          }
+
+          $inputEssay = $('#inputEssay');
+          if(!$inputEssay.val()) {
+            hasErrors = true;
+            $inputEssay.parents('.control-group').addClass('error');
+          } else {
+            $inputEssay.parents('.control-group').removeClass('error');
+          }
+
+          $inputPayment = $('#inputPayment');
+          if($inputPayment.is(':checked')) {
+            $inputPayment.parent().removeClass('text-error');
+          } else {
+            hasErrors = true;
+            $inputPayment.parent().addClass('text-error');
+          }
+
+          $inputEffort = $('#inputEffort');
+          if($inputEffort.is(':checked')) {
+            $inputEffort.parent().removeClass('text-error');
+          } else {
+            hasErrors = true;
+            $inputEffort.parent().addClass('text-error');
+          }
+
+          if (hasErrors) {
+            $('#inputStatus').show();
+            $('#inputStatus').addClass('alert-error');
+            return false;
+          } else {
+            $('form input').attr('disabled', 'disabled');
+            $('form textarea').attr('disabled', 'disabled');
+            $('form button').attr('disabled', 'disabled');
+            $('#inputStatus').removeClass('alert-error');
+            $('#inputStatus').html('Submitting, one moment...');
+          }
+        },
+        success: function() {
+          $('form button').hide();
+          $('#inputStatus').text("Thanks for submitting your application. We'll review it and get back to you soon!");
+          $('#inputStatus').removeClass('alert-error');
+          $('#inputStatus').addClass('alert-success');
+          $('#inputStatus').show();
+        },
+        error: function() {
+          $('#inputStatus').text("Something went wrong - please email contact@codestreak.com and we'll fix the issue!");
+          $('#inputStatus').addClass('alert-error');
+          $('#inputStatus').removeClass('alert-success');
+          $('#inputStatus').show();
+        }
+      });
+      return false;
+    });
+});
+</script>
+

@@ -3,6 +3,7 @@ class HomeController < ApplicationController
   def details; end
   def team; end
   def contact; end
-  def apply; end
+
+  def participate; end
 end
 
