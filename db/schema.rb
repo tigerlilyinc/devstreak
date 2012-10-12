@@ -11,13 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120916230012) do
+ActiveRecord::Schema.define(:version => 20121012171412) do
 
   create_table "submissions", :force => true do |t|
     t.string "name"
     t.string "email"
-    t.string "video"
-    t.text   "essay"
+    t.text   "essay_treehouse"
+    t.text   "essay_self"
   end
 
 end
