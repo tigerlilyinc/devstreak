@@ -95,3 +95,15 @@
           </div>
   </div>
 </div>
+
+<script>
+  $(function() {
+    $("#banner-icons").on("click", "a", function() {
+      console.log("ASDF");
+      console.log($(this).attr("href"));
+      scrollTo($(this).attr("href"));
+      return false;
+    });
+  });
+</script>
+
