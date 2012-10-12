@@ -9,10 +9,13 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require ../bootstrap/css/bootstrap.min.css
- *= require ../bootstrap/css/bootstrap-responsive.min.css
  *= require_self
  *= require_tree .
 */
+
+.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+  width: 1000px;
+}
 
 * {
     margin: 0px;
@@ -242,7 +245,7 @@ ul.nav li a {
 
       img {
         height: 150px;
-        margin-left: 50px;
+        margin-left: 20px;
       }
     }
   }
@@ -279,7 +282,7 @@ ul.nav li a {
     width: 950px;
     height: 506px;
     position: absolute;
-    right: -90px;
+    right: -176px;
     top: -60px;
     overflow: hidden;
   }
