@@ -50,18 +50,17 @@ $(function () {
     };
 
     var heroku = new Animation(
-        herokuContent,
+        $('#mentoring')[0],
         function (e) {
-            var t = -1 * this.height + (e - this.start);
-            n = "0px " + Math.max(t / 2 * -1, 0) + "px";
-            console.log(n)
+            var t = -1 * this.height + (e - this.start) + 100;
+            n = "0px " + Math.min(t / 2 * -1, 0) + "px";
             herokuContent.style.backgroundPosition = n
         },
         function () {
             herokuContent.style.backgroundPosition = "0px 0px"
         },
         function (e) {
-            return -1 * e + 100
+            return -1 * e - viewportHeight/2;
         }
     );
     animations.push(heroku);
