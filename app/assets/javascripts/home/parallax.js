@@ -57,17 +57,16 @@ $(function () {
           $("#community")[0],
           function(e) {
             var t = -1*this.height + (e-this.start);
-              console.log(t);
-          if(t>100){
-            cloud2.style.opacity = Math.min(Math.max(1-((t-100)/300),0),1);
-            cloud3.style.opacity = Math.min(Math.max(1-((t-100)/300),0),1);
-            cloud2.style.left = t-130 + "px";
-            cloud3.style.right = t/2-60 + "px";
-            }
+            cloud2.style.opacity = Math.min(Math.max(1-((t+300)/600),0),1);
+            cloud3.style.opacity = Math.min(Math.max(1-((t+150)/600),0),1);
+            cloud2.style.left = Math.max(-30, t/2 + 70) + "px";
+            cloud3.style.right = Math.max(10, t/2 + 100) + "px";
           },
           function() {
+            cloud2.style.opacity = 1;
+            cloud3.style.opacity = 1;
           },
-          function(e) { return -1*viewportHeight-150 }
+          function(e) { return -1*viewportHeight/2 }
         );
         animations.push(clouds);
 
