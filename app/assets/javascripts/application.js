@@ -12,8 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.form.js
 //= require ../bootstrap/js/bootstrap.min.js
-//= require_tree .
 
 function scrollTo(e) {
   $("html, body").animate({scrollTop:$(e).offset().top-$(window).height()/5},{duration:800,easing:"swing"});
