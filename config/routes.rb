@@ -8,8 +8,6 @@ Devstreak::Application.routes.draw do
 
   match '/participate' => 'home#participate'
 
-  match '/parallax' => 'home#parallax'
-
   root :to => 'home#index'
 end
 

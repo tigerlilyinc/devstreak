@@ -1,44 +1,121 @@
-<div class="hero-unit" style="background-image:url('/assets/screenshot1.png');background-repeat:no-repeat; background-size:100%">
-  <div class="shadow" style="display: inline-block; padding: 20px; padding-bottom: 0px; border-radius: 16px; background-color: #f5fafd;">
-    <h1>From zero to coding hero</h1>
-    <p>Become a good, junior Ruby on Rails developer in our six week, onsite program!</p>
-    <div>
-      <div style="text-align:center; float: left; padding: 30px;">
-        <a href="<%= details_path %>" class="btn btn-primary btn-large" style="margin-left: 20px; margin-top:60px;">Details this way &raquo;</a>
-      </div>
-      <div style="text-align: center; float: left; padding: 30px;">
-        <span class="label label-info">Before</span>
-        <br />
-        <img src="<%= image_path('planet_cute/Character Boy.png') %>" style="margin-top: -40px" />
-        <br />
-        "can has codez?"
-      </div>
-      <div style="text-align: center; float: left; padding: 30px;">
-        <span class="label label-info">After</span>
-        <br />
-        <img src="<%= image_path('planet_cute/Character Horn Girl.png') %>" style="margin-top: -40px" />
-        <br />
-        "check out my prototype!"
+<div id="headline" class="row">
+  <div class="span10">
+    <h1><b>Learn Ruby on Rails in 6 action-packed weeks.</b></h1>
+    <p>Follow through on your New Year's resolution to learn to code! Our curriculum is specifically designed to provide students of any background with the ability to work as a full-time, junior developer.</p>
+  </div>
+  <div class="span2 bounce-in">
+    <img src="<%= image_path('home/ruby_on_rails.png') %>" />
+  </div>
+</div>
+
+</div>
+<div id="banner">
+  <div class="container">
+    <div id="banner-graphics">
+      <div id="banner-macbook"></div>
+      <div id="banner-iphone"></div>
+    </div>
+    <ul id="banner-icons">
+      <li>
+      <a id="icon-community" class="has-icon" href="#community">
+        <h4>Make connections</h4>
+        <p>Meet like-minded individuals at our San Francisco office.</p>
+      </a>
+      </li>
+      <li>
+      <a id="icon-mentoring" class="has-icon" href="#mentoring">
+        <h4>Gain experience</h4>
+        <p>Learn from veteran developers who are excited to share their experience.</p>
+      </a>
+      </li>
+      <li>
+      <a id="icon-opportunity" class="has-icon" href="#opportunity">
+        <h4>Prepare for a new career</h4>
+        <p>Work on a portfolio project and interview skills to impress employers.</p>
+      </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="container">
+
+<div class="containing">
+  <div class="content row_b">
+    <div id="community" class="row_b">
+      <div class="column c_fit">
+                <div class="text">
+                  <h2>Join a world-class learning community!</h2>
+                  <p>We will host the next cohort of great developers at our office in downtown San Francisco.  We encourage working in code as much as possible - and challenging students to build projects as a group!</p>
+                  <p><a class="btn btn-large btn-inverse row-b-cta" href="<%= details_path %>">Learn more »</a></p>
+                  <div id="screenshots-timers" class="screenshots">
+                    <span class="open"></span>
+                  </div>
+                </div>
+              </div>
+      <div class="column c_fit last">
+                <div id="bridge">
+                  <div id="stopwatch-indicator" style="-webkit-transform: rotate(323deg); "></div>
+                  <div id="stopwatch-indicator-small"></div>
+                </div>
+              </div>
+    </div>
+    <div id="mentoring" class="row_b">
+              <div id="desktop" style="background-position: 0px 50px; background-size: 100%; ">
+                <div class="glare"></div>
+
+                <div id="invoice-stamp" style="-webkit-transform: scale(2.66); opacity: -0.10666666666666669; "></div>
+              </div>
+              <div class="text">
+                <h2>Evolve as a developer with industry mentorship!</h2>
+                <p>We have put together a team of excited, experienced developers to assist you in your quest to working as a competent coder.  We will be having guest lectures, a carousel of teachers, and hands-on assistance in coding exercises.</p>
+                <p><a class="btn btn-large btn-inverse row-b-cta" href="<%= team_path %>">Meet the team »</a></p>
+                <div class="screenshots">
+                </div>
+              </div>
+    </div>
+    <div id="opportunity" class="row_b">
+              <div class="text">
+                <h2>Take control of career opportunities in Silicon Valley!</h2>
+                <p>The average salary for a Ruby on Rails developer in SF is <a href="http://www.indeed.com/salary/q-Ruby-On-Rails-Developer-l-San-Francisco,-CA.html" target="blank"> over $100k</a>, according to indeed™. Our program will help you to impress potential employers with the projects you'll be working on!</p>
+                <p><a class="btn btn-large btn-inverse row-b-cta" href="<%= contact_path %>">Any questions? »</a></p>
+                <div class="screenshots">
+                  </div>
+              </div>
+              <div id="report-tooltip" style="opacity: 0; -webkit-transform: scale(0); "><p>August 14, 2012</p><small>$4,500 received</small></div>
+    </div>
+    <div id="press">
+      <span class="cronos">Companies Hiring Ruby on Rails Developers</span>
+      <div>
+        <img class="pressLogo" src="<%= image_path('/assets/home/twitter_logo.jpeg') %>" />
+        <img class="pressLogo" src="<%= image_path('/assets/home/linkedin_logo.jpg') %>" />
+        <img class="pressLogo" src="<%= image_path('/assets/home/groupon_logo.jpeg') %>" />
+        <img class="pressLogo" src="<%= image_path('/assets/home/cisco_logo.png') %>" />
+        <img class="pressLogo" src="<%= image_path('/assets/home/jp_morgan_logo.gif') %>" />
+        <img class="pressLogo" src="<%= image_path('/assets/home/thoughtworks_logo.png') %>" />
+        <img class="pressLogo" src="<%= image_path('/assets/home/scribd_logo.png') %>" />
+        <img class="pressLogo" src="<%= image_path('/assets/home/amazon_logo.png') %>" />
+        <img class="pressLogo" src="<%= image_path('/assets/home/ibm_logo.jpg') %>" />
+        <img class="pressLogo" src="<%= image_path('/assets/home/yahoo_logo.jpg') %>" />
       </div>
     </div>
+    <div id="apply_now" class="row">
+            <div class="text">
+              <h2>Ready to start building stunning web applications?</h2>
+              <p>Apply to codeStreak today!</p>
+              <a class="btn btn-large btn-primary" href="<%= apply_path %>">Apply Now!<span class="icon-arrow-right" style="margin-left:5px"></span></a>
+            </div>
+          </div>
   </div>
 </div>
-<p class="alert">We're only accepting applications until November 30th, so apply soon! Space is limited, but we will consider every application.</p>
-<div class="row">
-  <div class="span4">
-    <h2>Community</h2>
-    <p>Learning and working with your peers is a great way to gain new skills. At codeStreak, the student community is progressing through the same set of challenges together, and everyone is there to support each other. It's been proven time and time again that peer learning is extremely effective, and it's fantastic motivation to be in a collaborative enviroment.</p>
-    <p><a class="btn" href="<%= details_path %>">Learn more »</a></p>
-  </div>
-  <div class="span4">
-    <h2>Mentoring</h2>
-    <p>Our team has fantastic, friendly developers, and you'll love learning and working with us. In addition to traditional instruction, we'll be sitting down with you and helping you step through development challenges. We've built systems for billions of users, and we're looking forward to sharing our knowledge with you!</p>
-    <p><a class="btn" href="<%= team_path %>">Meet the team »</a></p>
-  </div>
-  <div class="span4">
-    <h2>Opportunity</h2>
-    <p>Ruby on Rails is a popular web framework, and developers with that skill are in high demand. The average salary for a RoR dev in SF is <a href="http://www.indeed.com/salary/q-Ruby-On-Rails-Developer-l-San-Francisco,-CA.html" target="_blank">over $100k</a>, according to indeed&#0153;. Our program will prepare you with everything you need to get a job, and at our demo day, you'll impress potential employers with the project you're been working on for the past few weeks!</p>
-    <p><a class="btn" href="<%= apply_path %>">Apply now »</a></p>
-  </div>
-</div>
+
+<script>
+  $(function() {
+    $("#banner-icons").on("click", "a", function() {
+      console.log("ASDF");
+      console.log($(this).attr("href"));
+      scrollTo($(this).attr("href"));
+      return false;
+    });
+  });
+</script>
 
