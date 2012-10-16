@@ -307,8 +307,52 @@ blockquote p {
     }
 
     #apply_now {
-        padding: 45px 0 50px 0;
-        text-align: center;
+        padding: 50px 0 50px 0;
+        .cta-apply {
+            margin-left: 40px;
+        }
+     .apply-hook {
+         margin-bottom: 13px;
+         margin-top: 6px;
+     }
+    }
+
+    .ruby-wrapper {
+        position: relative;
+        height: 100px;
+        width: 100px;
+
+        .ruby-image {
+            width:100px;
+            height:100px;
+            position: absolute;
+        }
+        .glimmer-1 {
+            height: 40px;
+            width: 40px;
+            position: absolute;
+            top: 35px;
+            left: 15px;
+            -webkit-animation: rubyShine 3s linear .6s infinite alternate;
+            -khtml-animation: rubyShine 3s linear .6s infinite alternate;
+            -moz-animation: rubyShine 3s linear .6s infinite alternate;
+            -ms-animation: rubyShine 3s linear .6s infinite alternate;
+            -o-animation: rubyShine 3s linear .6s infinite alternate;
+            animation: rubyShine 3s linear .6s infinite alternate;
+        }
+        .glimmer-2 {
+            height: 40px;
+            width: 40px;
+            position: absolute;
+            left: 45px;
+            -webkit-animation: rubyShine2 3s linear .6s infinite alternate;
+            -khtml-animation: rubyShine2 3s linear .6s infinite alternate;
+            -moz-animation: rubyShine2 3s linear .6s infinite alternate;
+            -ms-animation: rubyShine2 3s linear .6s infinite alternate;
+            -o-animation: rubyShine2 3s linear .6s infinite alternate;
+            animation: rubyShine2 3s linear .6s infinite alternate;
+
+        }
     }
 
     #press {
@@ -415,9 +459,54 @@ blockquote p {
 @-webkit-keyframes bounceInDown{0%{opacity:0;-webkit-transform:translateY(-2000px)}60%{opacity:1;-webkit-transform:translateY(30px)}80%{-webkit-transform:translateY(-10px)}100%{-webkit-transform:translateY(0)}} @-khtml-keyframes bounceInDown{0%{opacity:0;-khtml-transform:translateY(-2000px)}60%{opacity:1;-khtml-transform:translateY(30px)}80%{-khtml-transform:translateY(-10px)}100%{-khtml-transform:translateY(0)}} @-moz-keyframes bounceInDown{0%{opacity:0;-moz-transform:translateY(-2000px)}60%{opacity:1;-moz-transform:translateY(30px)}80%{-moz-transform:translateY(-10px)}100%{-moz-transform:translateY(0)}} @-ms-keyframes bounceInDown{0%{opacity:0;-ms-transform:translateY(-2000px)}60%{opacity:1;-ms-transform:translateY(30px)}80%{-ms-transform:translateY(-10px)}100%{-ms-transform:translateY(0)}} @-o-keyframes bounceInDown{0%{opacity:0;-o-transform:translateY(-2000px)}60%{opacity:1;-o-transform:translateY(30px)}80%{-o-transform:translateY(-10px)}100%{-o-transform:translateY(0)}} @keyframes bounceInDown{0%{opacity:0;transform:translateY(-2000px)}60%{opacity:1;transform:translateY(30px)}80%{transform:translateY(-10px)}100%{transform:translateY(0)}} .bounceInDown {
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              -webkit-animation-name: bounceInDown;
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              -khtml-animation-name: bounceInDown;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             -moz-animation-name: bounceInDown;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             -ms-animation-name: bounceInDown;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             -o-animation-name: bounceInDown;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             animation-name: bounceInDown
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             -moz-animation-name: bounceInDown;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             -ms-animation-name: bounceInDown;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             -o-animation-name: bounceInDown;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      animation-name: bounceInDown
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          }
 
+@keyframes rubyShine
+{
+0% {opacity: 0;}
+100% {opacity: 1;}
+}
+
+@-moz-keyframes rubyShine /* Firefox */
+{
+0% {opacity: 0;}
+100% {opacity: 1;}
+}
+
+@-webkit-keyframes rubyShine /* Safari and Chrome */
+{
+0% {opacity: 0;}
+100% {opacity: 1;}
+}
+
+@-o-keyframes rubyShine2 /* Opera */
+{
+0% {opacity: 1;}
+100% {opacity: 0;}
+}
+
+@keyframes rubyShine2
+{
+0% {opacity: 1;}
+100% {opacity: 0;}
+}
+
+@-moz-keyframes rubyShine2 /* Firefox */
+{
+0% {opacity: 1;}
+100% {opacity: 0;}
+}
+
+@-webkit-keyframes rubyShine2 /* Safari and Chrome */
+{
+0% {opacity: 1;}
+100% {opacity: 0;}
+}
+
+@-o-keyframes rubyShine2 /* Opera */
+{
+0% {opacity: 1;}
+100% {opacity: 0;}
+}
