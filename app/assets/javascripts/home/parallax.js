@@ -5,6 +5,7 @@ $(function () {
     AnimationStateIdle = 0;
     AnimationStateAnimating = 1;
     herokuContent = $("#heroku_code")[0];
+    opportunityTooltip = $("#opportunity-tooltip")[0];
 
     window.requestAnimFrame = function () {
         return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (e) {
@@ -64,6 +65,18 @@ $(function () {
         }
     );
     animations.push(heroku);
+
+    var chart = new Animation(
+      $("#opportunity")[0],
+      function(e) {
+        var t = -1 * this.height + (e-this.start);
+        opportunityTooltip.style.opacity = Math.max(Math.min(t/300,1),0);
+        opportunityTooltip.style.webkitTransform = "scale("+Math.max(Math.min(t/300,1),0)+")"
+      },
+      function() {},
+      function(e) { return -1*viewportHeight-150 }
+    );
+    animations.push(chart);
 
     function e() {
         var t = $(window).scrollTop();
