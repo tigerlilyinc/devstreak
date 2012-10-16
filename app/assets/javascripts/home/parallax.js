@@ -66,7 +66,7 @@ $(function () {
             cloud2.style.opacity = 1;
             cloud3.style.opacity = 1;
           },
-          function(e) { return -1*viewportHeight/2 }
+          function(e) { return -1*3*viewportHeight/4 }
         );
         animations.push(clouds);
 
