@@ -6,6 +6,9 @@ $(function () {
     AnimationStateAnimating = 1;
     herokuContent = $("#heroku_code")[0];
     opportunityTooltip = $("#opportunity-tooltip")[0];
+    cloud1 = $("#cloud-1")[0];
+    cloud2 = $("#cloud-2")[0];
+    cloud3 = $("#cloud-3")[0];
 
     window.requestAnimFrame = function () {
         return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (e) {
@@ -49,6 +52,24 @@ $(function () {
         this.state = AnimationStateAnimating;
         this.animation.call(this, e);
     };
+
+    var clouds = new Animation(
+          $("#community")[0],
+          function(e) {
+            var t = -1*this.height + (e-this.start);
+              console.log(t);
+          if(t>100){
+            cloud2.style.opacity = Math.min(Math.max(1-((t-100)/300),0),1);
+            cloud3.style.opacity = Math.min(Math.max(1-((t-100)/300),0),1);
+            cloud2.style.left = t-130 + "px";
+            cloud3.style.right = t/2-60 + "px";
+            }
+          },
+          function() {
+          },
+          function(e) { return -1*viewportHeight-150 }
+        );
+        animations.push(clouds);
 
     var heroku = new Animation(
         $('#mentoring')[0],
