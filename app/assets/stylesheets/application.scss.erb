@@ -315,18 +315,29 @@ blockquote p {
     }
 
     #opportunity {
+        position: relative;
         background-image: url("/assets/home/break.png");
         background-repeat: no-repeat;
         background-position: bottom center;
+        background: url("/assets/home/break.png") bottom center no-repeat, -webkit-linear-gradient(top, white, #f5fafd);
+        background: url("/assets/home/break.png") bottom center no-repeat, -moz-linear-gradient(top, white, #f5fafd);
+        background: url("/assets/home/break.png") bottom center no-repeat, -o-linear-gradient(top, white, #f5fafd);
+        background: url("/assets/home/break.png") bottom center no-repeat, linear-gradient(top, white, #f5fafd);
         overflow: hidden;
-        height: 401px;
+        height: 364;
         border-bottom: 1px solid #EEE;
-        background: url("/assets/home/graph.png") -60px bottom no-repeat;
 
         .text {
           width: 440px;
           padding: 40px;
           padding-left: 60px;
+        }
+
+        #opportunity-graph {
+          position: absolute;
+          bottom: 0px;
+          left: 0px;
+          right: 0px;
         }
 
         #opportunity-tooltip {
@@ -336,15 +347,15 @@ blockquote p {
           -ms-border-radius: 4px;
           -o-border-radius: 4px;
           border-radius: 4px;
-          background: #005991;
+          background: rgb(56, 160, 230);
           text-align: center;
           width: 150px;
           padding: 10px 0;
           overflow: auto;
           position: relative;
           text-shadow: 0 1px 0 #002942;
-          left: 660px;
-          top: -110px;
+          left: 624px;
+          top: -198px;
 
           p {
             color: #fff;
