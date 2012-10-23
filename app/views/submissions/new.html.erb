@@ -30,8 +30,14 @@
     </div>
   </div>
   <div class="control-group">
+    <label class="control-label" for="inputDiscountCode">Secret Code</label>
+    <div class="controls controls-row">
+      <input name="submission[discount_code]" type="text" id="inputDiscountCode" class="span4" placeholder="Secret Code (if any)"><span class="span4 inline">If you received a secret code from one of our partners, enter it here!</span>
+    </div>
+  </div>
+  <div class="control-group">
     <div class="controls">
-      <label class="checkbox">
+       <label class="checkbox">
         <input type="checkbox" id="inputPayment"> If I am accepted to codeStreak, I will pay the <a href="<%= details_path %>#tuition">program tuition</a>
       </label>
       <label class="checkbox">
