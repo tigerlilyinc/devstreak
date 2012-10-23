@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.form.js
+//= require jquery.sharrre-1.3.3.min.js
 //= require ../bootstrap/js/bootstrap.min.js
 
 function scrollTo(e) {
